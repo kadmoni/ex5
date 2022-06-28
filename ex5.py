@@ -34,6 +34,7 @@ def courses_for_lecturers(json_directory_path, output_json_path):
             del lecturers_dict[name]
     with open(output_json_path, 'w') as output_file:
         json.dump(lecturers_dict,output_file, indent=4)
+    pass
 
 
 def enrollment_numbers(input_json_file, output_file_path):
@@ -50,6 +51,7 @@ def enrollment_numbers(input_json_file, output_file_path):
         for name in sorted_names:
             output_file.write('"'+name+'"'+' ')
             output_file.write(str(my_courses[name])+'\n')
+    pass
 
 
 
